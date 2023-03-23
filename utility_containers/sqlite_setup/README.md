@@ -12,7 +12,7 @@ To build the sqlite image from alpine base image, give following command on term
 
 To use sqlite with local file system, bind mount with container is necessary. Following command is appropriate for that:
 
-`docker run -it --rm --name sqlitecontainer -v "/home/.../Workspace/SQLiteProject:/workspace" efaa31b3de15`
+`docker run -it --rm --name sqlitecontainer -v "$PWD:/workspace" efaa31b3de15`
 
 # Podman
 
@@ -27,7 +27,7 @@ To build the sqlite image from alpine base image, give following command on term
 
 To use sqlite with local file system, bind mount with container is necessary. Following command is appropriate for that:
 
-`podman run -it --rm --name sqlitecontainer --security-opt label=disable -v "/home/.../Workspace/SQLiteProject:/workspace" efaa31b3de15`
+`podman run -it --rm --name sqlitecontainer --security-opt label=disable -v "$PWD:/workspace" efaa31b3de15`
 
 <br>
 

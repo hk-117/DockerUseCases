@@ -12,7 +12,7 @@ To build the vhdl image from ubuntu base image, give following command on termin
 
 To use vhdl with local file system, bind mount with container is necessary. Following command is appropriate for that:
 
-`docker run -it --rm --name vhdlcontainer -v "/home/.../Workspace/VhdlProject:/workspace" efaa31b3de15`
+`docker run -it --rm --name vhdlcontainer -v "$PWD:/workspace" efaa31b3de15`
 
 # Podman
 
@@ -27,7 +27,7 @@ To build the vhdl image from ubuntu base image, give following command on termin
 
 To use vhdl with local file system, bind mount with container is necessary. Following command is appropriate for that:
 
-`podman run -it --rm --name vhdlcontainer --security-opt label=disable -v "/home/.../Workspace/VhdlProject:/workspace" efaa31b3de15`
+`podman run -it --rm --name vhdlcontainer --security-opt label=disable -v "$PWD:/workspace" efaa31b3de15`
 
 <br>
 
