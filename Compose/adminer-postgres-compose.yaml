@@ -1,0 +1,22 @@
+version: '3.1'
+
+services:
+
+  adminer:
+    image: adminer
+    container_name: dbadmin
+    restart: always
+    ports:
+      - 8080:8080
+
+  db:
+    image: postgres
+    container_name: postgresdb
+    restart: always
+    ports:
+      - 5432:5432
+    volumes:
+      - ./database:/var/lib/postgresql/data
+    environment:
+      POSTGRES_USER: root
+      POSTGRES_PASSWORD: root
